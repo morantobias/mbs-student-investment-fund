@@ -1,0 +1,198 @@
+// Cross-sectional analytics — DuPont, common-size statements, peer statistics,
+// screening and composite scoring. Port of app/R/analytics.R.
+
+import { median, n1 } from "./brand.js";
+import type { FinRow, Ratios } from "./types.js";
+
+export interface DupontRow {
+  label: string;
+  netMargin: number | null;
+  assetTurnover: number | null;
+  leverage: number | null;
+  roeDupont: number | null;
+  roe: number | null;
+}
+
+export function dupontTable(fin: FinRow[]): DupontRow[] {
+  return fin.map((r) => {
+    const nm = r.net_margin as number | null;
+    const at = r.asset_turnover as number | null;
+    const lev = r.leverage as number | null;
+    return {
+      label: r.label as string,
+      netMargin: nm,
+      assetTurnover: at,
+      leverage: lev,
+      roeDupont: nm !== null && at !== null && lev !== null ? nm * at * lev : null,
+      roe: r.roe as number | null,
+    };
+  });
+}
+
+export type CommonSizeKind = "income" | "balance";
+
+const INCOME_ITEMS: [string, string][] = [
+  ["revenue", "Revenue"],
+  ["cost_of_revenue", "Cost of revenue"],
+  ["gross_profit", "Gross profit"],
+  ["operating_expense", "Operating expenses"],
+  ["ebitda", "EBITDA"],
+  ["da", "D&A"],
+  ["ebit", "EBIT"],
+  ["interest_net", "Net interest"],
+  ["pretax_income", "Pre-tax income"],
+  ["tax", "Tax"],
+  ["net_income", "Net income"],
+];
+
+const BALANCE_ITEMS: [string, string][] = [
+  ["cash_total", "Cash & investments"],
+  ["receivables", "Receivables"],
+  ["net_ppe", "Net PP&E"],
+  ["goodwill_intang", "Goodwill & intangibles"],
+  ["total_assets", "Total assets"],
+  ["payables", "Payables"],
+  ["total_debt", "Total debt"],
+  ["total_liabilities", "Total liabilities"],
+  ["equity", "Shareholders' equity"],
+];
+
+/** Common-size statement: each line as a share of revenue (income) or assets (balance). */
+export function commonSize(
+  fin: FinRow[],
+  which: CommonSizeKind,
+): { items: { line: string; values: (number | null)[] }[]; labels: string[] } {
+  const items = which === "income" ? INCOME_ITEMS : BALANCE_ITEMS;
+  const base = fin.map((r) => (which === "income" ? r.revenue : r.total_assets) as number | null);
+  return {
+    labels: fin.map((r) => r.label as string),
+    items: items.map(([key, line]) => ({
+      line,
+      values: fin.map((r, i) => {
+        const v = r[key] as number | null;
+        return v !== null && base[i] !== null && base[i] !== 0 ? v / base[i]! : null;
+      }),
+    })),
+  };
+}
+
+export interface PeerPercentileRow {
+  metric: string;
+  value: number | null;
+  percentile: number | null;
+  peerMedian: number | null;
+  n: number;
+}
+
+/** Percentile rank of the subject within its peer set for each metric (0–1). */
+export function peerPercentiles(
+  table: Ratios[],
+  subjectCode: string,
+  metrics: string[],
+): PeerPercentileRow[] {
+  const subject = table.find((r) => r.code === subjectCode);
+  if (!subject) return [];
+  return metrics.map((metric) => {
+    const all = table.map((r) => (r as unknown as Record<string, number | null>)[metric]).filter((v): v is number => typeof v === "number" && Number.isFinite(v));
+    const value = (subject as unknown as Record<string, number | null>)[metric] ?? null;
+    return {
+      metric,
+      value,
+      percentile: value === null || all.length < 2 ? null : all.filter((x) => x <= value).length / all.length,
+      peerMedian: all.length ? median(all) : null,
+      n: all.length,
+    };
+  });
+}
+
+export interface ScreenRanges {
+  [key: string]: [number, number] | null;
+}
+
+/** Filter a ratios table by named ranges; a null/absent range means "no filter". */
+export function screenTable(
+  table: Ratios[],
+  ranges: ScreenRanges,
+  opts: { sectors?: string[]; industries?: string[] } = {},
+): Ratios[] {
+  let out = table;
+  if (opts.sectors?.length) out = out.filter((r) => r.sector && opts.sectors!.includes(r.sector));
+  if (opts.industries?.length) out = out.filter((r) => r.industry && opts.industries!.includes(r.industry));
+  for (const [key, range] of Object.entries(ranges)) {
+    if (!range) continue;
+    const [lo, hi] = range;
+    out = out.filter((r) => {
+      const v = (r as unknown as Record<string, number | null>)[key];
+      return v === null || v === undefined || (v >= lo && v <= hi);
+    });
+  }
+  return out;
+}
+
+function percentileRank(xs: (number | null)[], higherBetter = true): (number | null)[] {
+  const valid = xs.filter((v): v is number => v !== null && Number.isFinite(v));
+  if (valid.length < 2) return xs.map(() => null);
+  const sorted = [...valid].sort((a, b) => a - b);
+  const rank = (v: number) => {
+    // R's rank(): ties share the average rank.
+    const idx = sorted.indexOf(v);
+    const lastIdx = sorted.lastIndexOf(v);
+    const avg = (idx + lastIdx) / 2;
+    return higherBetter ? avg : sorted.length - 1 - avg;
+  };
+  return xs.map((v) => (v === null || !Number.isFinite(v) ? null : rank(v) / (valid.length - 1)));
+}
+
+export interface ScoredRow extends Ratios {
+  scoreQuality: number | null;
+  scoreValue: number | null;
+  scoreGrowth: number | null;
+  scoreMomentum: number | null;
+  scoreTotal: number | null;
+}
+
+const rowMeans = (...cols: (number | null)[][]): (number | null)[] =>
+  cols[0].map((_, i) => {
+    const vals = cols.map((c) => c[i]).filter((v): v is number => v !== null && Number.isFinite(v));
+    return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+  });
+
+/** Equal-weighted percentile composite: quality, value, growth and momentum. */
+export function compositeScores(table: Ratios[]): ScoredRow[] {
+  if (table.length < 2) {
+    return table.map((r) => ({ ...r, scoreQuality: null, scoreValue: null, scoreGrowth: null, scoreMomentum: null, scoreTotal: null }));
+  }
+  const get = (k: string) => table.map((r) => (r as unknown as Record<string, number | null>)[k] ?? null);
+
+  const quality = rowMeans(percentileRank(get("roe")), percentileRank(get("netMargin")), percentileRank(get("cashConversion")));
+  const value = rowMeans(
+    percentileRank(get("peRatio"), false),
+    percentileRank(get("pbRatio"), false),
+    percentileRank(get("evEbitda"), false),
+    percentileRank(get("dividendYield")),
+  );
+  const growth = rowMeans(percentileRank(get("revenueCagr")), percentileRank(get("epsCagr")));
+  const momentum = percentileRank(get("return1y"));
+  const total = rowMeans(quality, value, growth, momentum);
+
+  return table.map((r, i) => ({
+    ...r,
+    scoreQuality: quality[i],
+    scoreValue: value[i],
+    scoreGrowth: growth[i],
+    scoreMomentum: momentum[i],
+    scoreTotal: total[i],
+  }));
+}
+
+/** Closing price on or just before a date (null when history does not reach it). */
+export function priceAt(history: { date: string; close: number }[], date: string): number | null {
+  if (!history?.length || !date) return null;
+  const eligible = history.filter((h) => h.date <= date);
+  if (!eligible.length) return null;
+  const last = eligible[eligible.length - 1];
+  const gap = (new Date(date).getTime() - new Date(last.date).getTime()) / 864e5;
+  return gap > 10 ? null : last.close;
+}
+
+export const latest = (v: unknown) => n1(v);

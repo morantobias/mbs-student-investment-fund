@@ -1,0 +1,2487 @@
+{
+  "companies": [
+    {
+      "code": "CBA",
+      "name": "Commonwealth Bank of Australia",
+      "sector": "Financials",
+      "industry": "Banks",
+      "ticker": "CBA.AX",
+      "family": "bank",
+      "peers": [
+        "WBC",
+        "NAB",
+        "ANZ",
+        "BOQ",
+        "BEN",
+        "JDO"
+      ]
+    },
+    {
+      "code": "WBC",
+      "name": "Westpac Banking Corporation",
+      "sector": "Financials",
+      "industry": "Banks",
+      "ticker": "WBC.AX",
+      "family": "bank",
+      "peers": [
+        "CBA",
+        "NAB",
+        "ANZ",
+        "BOQ",
+        "BEN",
+        "JDO"
+      ]
+    },
+    {
+      "code": "NAB",
+      "name": "National Australia Bank",
+      "sector": "Financials",
+      "industry": "Banks",
+      "ticker": "NAB.AX",
+      "family": "bank",
+      "peers": [
+        "CBA",
+        "WBC",
+        "ANZ",
+        "BOQ",
+        "BEN",
+        "JDO"
+      ]
+    },
+    {
+      "code": "ANZ",
+      "name": "ANZ Group Holdings",
+      "sector": "Financials",
+      "industry": "Banks",
+      "ticker": "ANZ.AX",
+      "family": "bank",
+      "peers": [
+        "CBA",
+        "WBC",
+        "NAB",
+        "BOQ",
+        "BEN",
+        "JDO"
+      ]
+    },
+    {
+      "code": "MQG",
+      "name": "Macquarie Group",
+      "sector": "Financials",
+      "industry": "Capital Markets",
+      "ticker": "MQG.AX",
+      "family": "financial",
+      "peers": [
+        "CBA",
+        "WBC",
+        "NAB",
+        "ANZ",
+        "ASX",
+        "CPU",
+        "PNI",
+        "GQG"
+      ]
+    },
+    {
+      "code": "BOQ",
+      "name": "Bank of Queensland",
+      "sector": "Financials",
+      "industry": "Banks",
+      "ticker": "BOQ.AX",
+      "family": "bank",
+      "peers": [
+        "CBA",
+        "WBC",
+        "NAB",
+        "ANZ",
+        "BEN",
+        "JDO"
+      ]
+    },
+    {
+      "code": "BEN",
+      "name": "Bendigo and Adelaide Bank",
+      "sector": "Financials",
+      "industry": "Banks",
+      "ticker": "BEN.AX",
+      "family": "bank",
+      "peers": [
+        "CBA",
+        "WBC",
+        "NAB",
+        "ANZ",
+        "BOQ",
+        "JDO"
+      ]
+    },
+    {
+      "code": "JDO",
+      "name": "Judo Capital Holdings",
+      "sector": "Financials",
+      "industry": "Banks",
+      "ticker": "JDO.AX",
+      "family": "bank",
+      "peers": [
+        "CBA",
+        "WBC",
+        "NAB",
+        "ANZ",
+        "BOQ",
+        "BEN"
+      ]
+    },
+    {
+      "code": "ASX",
+      "name": "ASX Limited",
+      "sector": "Financials",
+      "industry": "Capital Markets",
+      "ticker": "ASX.AX",
+      "family": "financial",
+      "peers": [
+        "MQG",
+        "CPU"
+      ]
+    },
+    {
+      "code": "CPU",
+      "name": "Computershare",
+      "sector": "Financials",
+      "industry": "Capital Markets",
+      "ticker": "CPU.AX",
+      "family": "financial",
+      "peers": [
+        "MQG",
+        "ASX"
+      ]
+    },
+    {
+      "code": "NWL",
+      "name": "Netwealth Group",
+      "sector": "Financials",
+      "industry": "Wealth Platforms & Asset Management",
+      "ticker": "NWL.AX",
+      "family": "financial",
+      "peers": [
+        "HUB",
+        "PNI",
+        "GQG",
+        "PPT",
+        "AMP"
+      ]
+    },
+    {
+      "code": "HUB",
+      "name": "HUB24",
+      "sector": "Financials",
+      "industry": "Wealth Platforms & Asset Management",
+      "ticker": "HUB.AX",
+      "family": "financial",
+      "peers": [
+        "NWL",
+        "PNI",
+        "GQG",
+        "PPT",
+        "AMP"
+      ]
+    },
+    {
+      "code": "PNI",
+      "name": "Pinnacle Investment Management",
+      "sector": "Financials",
+      "industry": "Wealth Platforms & Asset Management",
+      "ticker": "PNI.AX",
+      "family": "financial",
+      "peers": [
+        "NWL",
+        "HUB",
+        "GQG",
+        "PPT",
+        "AMP"
+      ]
+    },
+    {
+      "code": "GQG",
+      "name": "GQG Partners",
+      "sector": "Financials",
+      "industry": "Wealth Platforms & Asset Management",
+      "ticker": "GQG.AX",
+      "family": "financial",
+      "peers": [
+        "NWL",
+        "HUB",
+        "PNI",
+        "PPT",
+        "AMP"
+      ]
+    },
+    {
+      "code": "PPT",
+      "name": "Perpetual",
+      "sector": "Financials",
+      "industry": "Wealth Platforms & Asset Management",
+      "ticker": "PPT.AX",
+      "family": "financial",
+      "peers": [
+        "NWL",
+        "HUB",
+        "PNI",
+        "GQG",
+        "AMP"
+      ]
+    },
+    {
+      "code": "AMP",
+      "name": "AMP Limited",
+      "sector": "Financials",
+      "industry": "Wealth Platforms & Asset Management",
+      "ticker": "AMP.AX",
+      "family": "financial",
+      "peers": [
+        "NWL",
+        "HUB",
+        "PNI",
+        "GQG",
+        "PPT"
+      ]
+    },
+    {
+      "code": "CGF",
+      "name": "Challenger",
+      "sector": "Financials",
+      "industry": "Insurance",
+      "ticker": "CGF.AX",
+      "family": "insurer",
+      "peers": [
+        "QBE",
+        "IAG",
+        "SUN",
+        "MPL",
+        "NHF",
+        "AUB",
+        "SDF",
+        "HLI"
+      ]
+    },
+    {
+      "code": "SOL",
+      "name": "Washington H. Soul Pattinson",
+      "sector": "Financials",
+      "industry": "Diversified Financials",
+      "ticker": "SOL.AX",
+      "family": "financial",
+      "peers": [
+        "AFI",
+        "ARG"
+      ]
+    },
+    {
+      "code": "AFI",
+      "name": "Australian Foundation Investment Company",
+      "sector": "Financials",
+      "industry": "Diversified Financials",
+      "ticker": "AFI.AX",
+      "family": "financial",
+      "peers": [
+        "SOL",
+        "ARG"
+      ]
+    },
+    {
+      "code": "ARG",
+      "name": "Argo Investments",
+      "sector": "Financials",
+      "industry": "Diversified Financials",
+      "ticker": "ARG.AX",
+      "family": "financial",
+      "peers": [
+        "SOL",
+        "AFI"
+      ]
+    },
+    {
+      "code": "QBE",
+      "name": "QBE Insurance Group",
+      "sector": "Financials",
+      "industry": "Insurance",
+      "ticker": "QBE.AX",
+      "family": "insurer",
+      "peers": [
+        "CGF",
+        "IAG",
+        "SUN",
+        "MPL",
+        "NHF",
+        "AUB",
+        "SDF",
+        "HLI"
+      ]
+    },
+    {
+      "code": "IAG",
+      "name": "Insurance Australia Group",
+      "sector": "Financials",
+      "industry": "Insurance",
+      "ticker": "IAG.AX",
+      "family": "insurer",
+      "peers": [
+        "CGF",
+        "QBE",
+        "SUN",
+        "MPL",
+        "NHF",
+        "AUB",
+        "SDF",
+        "HLI"
+      ]
+    },
+    {
+      "code": "SUN",
+      "name": "Suncorp Group",
+      "sector": "Financials",
+      "industry": "Insurance",
+      "ticker": "SUN.AX",
+      "family": "insurer",
+      "peers": [
+        "CGF",
+        "QBE",
+        "IAG",
+        "MPL",
+        "NHF",
+        "AUB",
+        "SDF",
+        "HLI"
+      ]
+    },
+    {
+      "code": "MPL",
+      "name": "Medibank Private",
+      "sector": "Financials",
+      "industry": "Insurance",
+      "ticker": "MPL.AX",
+      "family": "insurer",
+      "peers": [
+        "CGF",
+        "QBE",
+        "IAG",
+        "SUN",
+        "NHF",
+        "AUB",
+        "SDF",
+        "HLI"
+      ]
+    },
+    {
+      "code": "NHF",
+      "name": "NIB Holdings",
+      "sector": "Financials",
+      "industry": "Insurance",
+      "ticker": "NHF.AX",
+      "family": "insurer",
+      "peers": [
+        "CGF",
+        "QBE",
+        "IAG",
+        "SUN",
+        "MPL",
+        "AUB",
+        "SDF",
+        "HLI"
+      ]
+    },
+    {
+      "code": "AUB",
+      "name": "AUB Group",
+      "sector": "Financials",
+      "industry": "Insurance",
+      "ticker": "AUB.AX",
+      "family": "insurer",
+      "peers": [
+        "CGF",
+        "QBE",
+        "IAG",
+        "SUN",
+        "MPL",
+        "NHF",
+        "SDF",
+        "HLI"
+      ]
+    },
+    {
+      "code": "SDF",
+      "name": "Steadfast Group",
+      "sector": "Financials",
+      "industry": "Insurance",
+      "ticker": "SDF.AX",
+      "family": "insurer",
+      "peers": [
+        "CGF",
+        "QBE",
+        "IAG",
+        "SUN",
+        "MPL",
+        "NHF",
+        "AUB",
+        "HLI"
+      ]
+    },
+    {
+      "code": "HLI",
+      "name": "Helia Group",
+      "sector": "Financials",
+      "industry": "Insurance",
+      "ticker": "HLI.AX",
+      "family": "insurer",
+      "peers": [
+        "CGF",
+        "QBE",
+        "IAG",
+        "SUN",
+        "MPL",
+        "NHF",
+        "AUB",
+        "SDF"
+      ]
+    },
+    {
+      "code": "ZIP",
+      "name": "Zip Co",
+      "sector": "Financials",
+      "industry": "Consumer Finance",
+      "ticker": "ZIP.AX",
+      "family": "financial",
+      "peers": [
+        "CBA",
+        "WBC",
+        "NAB",
+        "ANZ",
+        "JDO",
+        "HUB"
+      ]
+    },
+    {
+      "code": "BHP",
+      "name": "BHP Group",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "BHP.AX",
+      "family": "industrial",
+      "peers": [
+        "RIO",
+        "FMG",
+        "S32",
+        "MIN",
+        "IGO",
+        "PLS",
+        "LYC",
+        "ILU",
+        "SFR"
+      ]
+    },
+    {
+      "code": "RIO",
+      "name": "Rio Tinto",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "RIO.AX",
+      "family": "industrial",
+      "peers": [
+        "BHP",
+        "FMG",
+        "S32",
+        "MIN",
+        "IGO",
+        "PLS",
+        "LYC",
+        "ILU",
+        "SFR"
+      ]
+    },
+    {
+      "code": "FMG",
+      "name": "Fortescue",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "FMG.AX",
+      "family": "industrial",
+      "peers": [
+        "BHP",
+        "RIO",
+        "S32",
+        "MIN",
+        "IGO",
+        "PLS",
+        "LYC",
+        "ILU",
+        "SFR"
+      ]
+    },
+    {
+      "code": "S32",
+      "name": "South32",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "S32.AX",
+      "family": "industrial",
+      "peers": [
+        "BHP",
+        "RIO",
+        "FMG",
+        "MIN",
+        "IGO",
+        "PLS",
+        "LYC",
+        "ILU",
+        "SFR"
+      ]
+    },
+    {
+      "code": "MIN",
+      "name": "Mineral Resources",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "MIN.AX",
+      "family": "industrial",
+      "peers": [
+        "BHP",
+        "RIO",
+        "FMG",
+        "S32",
+        "IGO",
+        "PLS",
+        "LYC",
+        "ILU",
+        "SFR"
+      ]
+    },
+    {
+      "code": "IGO",
+      "name": "IGO Limited",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "IGO.AX",
+      "family": "industrial",
+      "peers": [
+        "BHP",
+        "RIO",
+        "FMG",
+        "S32",
+        "MIN",
+        "PLS",
+        "LYC",
+        "ILU",
+        "SFR"
+      ]
+    },
+    {
+      "code": "PLS",
+      "name": "Pilbara Minerals",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "PLS.AX",
+      "family": "industrial",
+      "peers": [
+        "BHP",
+        "RIO",
+        "FMG",
+        "S32",
+        "MIN",
+        "IGO",
+        "LYC",
+        "ILU",
+        "SFR"
+      ]
+    },
+    {
+      "code": "LYC",
+      "name": "Lynas Rare Earths",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "LYC.AX",
+      "family": "industrial",
+      "peers": [
+        "BHP",
+        "RIO",
+        "FMG",
+        "S32",
+        "MIN",
+        "IGO",
+        "PLS",
+        "ILU",
+        "SFR"
+      ]
+    },
+    {
+      "code": "ILU",
+      "name": "Iluka Resources",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "ILU.AX",
+      "family": "industrial",
+      "peers": [
+        "BHP",
+        "RIO",
+        "FMG",
+        "S32",
+        "MIN",
+        "IGO",
+        "PLS",
+        "LYC",
+        "SFR"
+      ]
+    },
+    {
+      "code": "SFR",
+      "name": "Sandfire Resources",
+      "sector": "Materials",
+      "industry": "Metals & Mining",
+      "ticker": "SFR.AX",
+      "family": "industrial",
+      "peers": [
+        "BHP",
+        "RIO",
+        "FMG",
+        "S32",
+        "MIN",
+        "IGO",
+        "PLS",
+        "LYC",
+        "ILU"
+      ]
+    },
+    {
+      "code": "NEM",
+      "name": "Newmont Corporation",
+      "sector": "Materials",
+      "industry": "Gold",
+      "ticker": "NEM.AX",
+      "family": "industrial",
+      "peers": [
+        "NST",
+        "EVN",
+        "GMD",
+        "RRL",
+        "PRU",
+        "CMM"
+      ]
+    },
+    {
+      "code": "NST",
+      "name": "Northern Star Resources",
+      "sector": "Materials",
+      "industry": "Gold",
+      "ticker": "NST.AX",
+      "family": "industrial",
+      "peers": [
+        "NEM",
+        "EVN",
+        "GMD",
+        "RRL",
+        "PRU",
+        "CMM"
+      ]
+    },
+    {
+      "code": "EVN",
+      "name": "Evolution Mining",
+      "sector": "Materials",
+      "industry": "Gold",
+      "ticker": "EVN.AX",
+      "family": "industrial",
+      "peers": [
+        "NEM",
+        "NST",
+        "GMD",
+        "RRL",
+        "PRU",
+        "CMM"
+      ]
+    },
+    {
+      "code": "GMD",
+      "name": "Genesis Minerals",
+      "sector": "Materials",
+      "industry": "Gold",
+      "ticker": "GMD.AX",
+      "family": "industrial",
+      "peers": [
+        "NEM",
+        "NST",
+        "EVN",
+        "RRL",
+        "PRU",
+        "CMM"
+      ]
+    },
+    {
+      "code": "RRL",
+      "name": "Regis Resources",
+      "sector": "Materials",
+      "industry": "Gold",
+      "ticker": "RRL.AX",
+      "family": "industrial",
+      "peers": [
+        "NEM",
+        "NST",
+        "EVN",
+        "GMD",
+        "PRU",
+        "CMM"
+      ]
+    },
+    {
+      "code": "PRU",
+      "name": "Perseus Mining",
+      "sector": "Materials",
+      "industry": "Gold",
+      "ticker": "PRU.AX",
+      "family": "industrial",
+      "peers": [
+        "NEM",
+        "NST",
+        "EVN",
+        "GMD",
+        "RRL",
+        "CMM"
+      ]
+    },
+    {
+      "code": "CMM",
+      "name": "Capricorn Metals",
+      "sector": "Materials",
+      "industry": "Gold",
+      "ticker": "CMM.AX",
+      "family": "industrial",
+      "peers": [
+        "NEM",
+        "NST",
+        "EVN",
+        "GMD",
+        "RRL",
+        "PRU"
+      ]
+    },
+    {
+      "code": "ORI",
+      "name": "Orica",
+      "sector": "Materials",
+      "industry": "Chemicals",
+      "ticker": "ORI.AX",
+      "family": "industrial",
+      "peers": [
+        "NUF"
+      ]
+    },
+    {
+      "code": "NUF",
+      "name": "Nufarm",
+      "sector": "Materials",
+      "industry": "Chemicals",
+      "ticker": "NUF.AX",
+      "family": "industrial",
+      "peers": [
+        "ORI"
+      ]
+    },
+    {
+      "code": "JHX",
+      "name": "James Hardie Industries",
+      "sector": "Materials",
+      "industry": "Building Materials",
+      "ticker": "JHX.AX",
+      "family": "industrial",
+      "peers": [
+        "BSL"
+      ]
+    },
+    {
+      "code": "BSL",
+      "name": "BlueScope Steel",
+      "sector": "Materials",
+      "industry": "Building Materials",
+      "ticker": "BSL.AX",
+      "family": "industrial",
+      "peers": [
+        "JHX"
+      ]
+    },
+    {
+      "code": "AMC",
+      "name": "Amcor",
+      "sector": "Materials",
+      "industry": "Packaging",
+      "ticker": "AMC.AX",
+      "family": "industrial",
+      "peers": [
+        "ORA"
+      ]
+    },
+    {
+      "code": "ORA",
+      "name": "Orora",
+      "sector": "Materials",
+      "industry": "Packaging",
+      "ticker": "ORA.AX",
+      "family": "industrial",
+      "peers": [
+        "AMC"
+      ]
+    },
+    {
+      "code": "WDS",
+      "name": "Woodside Energy Group",
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "ticker": "WDS.AX",
+      "family": "industrial",
+      "peers": [
+        "STO",
+        "BPT",
+        "KAR"
+      ]
+    },
+    {
+      "code": "STO",
+      "name": "Santos",
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "ticker": "STO.AX",
+      "family": "industrial",
+      "peers": [
+        "WDS",
+        "BPT",
+        "KAR"
+      ]
+    },
+    {
+      "code": "BPT",
+      "name": "Beach Energy",
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "ticker": "BPT.AX",
+      "family": "industrial",
+      "peers": [
+        "WDS",
+        "STO",
+        "KAR"
+      ]
+    },
+    {
+      "code": "KAR",
+      "name": "Karoon Energy",
+      "sector": "Energy",
+      "industry": "Oil & Gas",
+      "ticker": "KAR.AX",
+      "family": "industrial",
+      "peers": [
+        "WDS",
+        "STO",
+        "BPT"
+      ]
+    },
+    {
+      "code": "ALD",
+      "name": "Ampol",
+      "sector": "Energy",
+      "industry": "Fuel Refining & Marketing",
+      "ticker": "ALD.AX",
+      "family": "industrial",
+      "peers": [
+        "VEA"
+      ]
+    },
+    {
+      "code": "VEA",
+      "name": "Viva Energy Group",
+      "sector": "Energy",
+      "industry": "Fuel Refining & Marketing",
+      "ticker": "VEA.AX",
+      "family": "industrial",
+      "peers": [
+        "ALD"
+      ]
+    },
+    {
+      "code": "WHC",
+      "name": "Whitehaven Coal",
+      "sector": "Energy",
+      "industry": "Coal",
+      "ticker": "WHC.AX",
+      "family": "industrial",
+      "peers": [
+        "YAL",
+        "NHC"
+      ]
+    },
+    {
+      "code": "YAL",
+      "name": "Yancoal Australia",
+      "sector": "Energy",
+      "industry": "Coal",
+      "ticker": "YAL.AX",
+      "family": "industrial",
+      "peers": [
+        "WHC",
+        "NHC"
+      ]
+    },
+    {
+      "code": "NHC",
+      "name": "New Hope Corporation",
+      "sector": "Energy",
+      "industry": "Coal",
+      "ticker": "NHC.AX",
+      "family": "industrial",
+      "peers": [
+        "WHC",
+        "YAL"
+      ]
+    },
+    {
+      "code": "PDN",
+      "name": "Paladin Energy",
+      "sector": "Energy",
+      "industry": "Uranium",
+      "ticker": "PDN.AX",
+      "family": "industrial",
+      "peers": [
+        "BOE"
+      ]
+    },
+    {
+      "code": "BOE",
+      "name": "Boss Energy",
+      "sector": "Energy",
+      "industry": "Uranium",
+      "ticker": "BOE.AX",
+      "family": "industrial",
+      "peers": [
+        "PDN"
+      ]
+    },
+    {
+      "code": "WOR",
+      "name": "Worley",
+      "sector": "Energy",
+      "industry": "Energy Services",
+      "ticker": "WOR.AX",
+      "family": "industrial",
+      "peers": [
+        "MND",
+        "DOW",
+        "VNT",
+        "ALQ"
+      ]
+    },
+    {
+      "code": "AGL",
+      "name": "AGL Energy",
+      "sector": "Utilities",
+      "industry": "Utilities",
+      "ticker": "AGL.AX",
+      "family": "industrial",
+      "peers": [
+        "ORG",
+        "APA",
+        "MEZ"
+      ]
+    },
+    {
+      "code": "ORG",
+      "name": "Origin Energy",
+      "sector": "Utilities",
+      "industry": "Utilities",
+      "ticker": "ORG.AX",
+      "family": "industrial",
+      "peers": [
+        "AGL",
+        "APA",
+        "MEZ"
+      ]
+    },
+    {
+      "code": "APA",
+      "name": "APA Group",
+      "sector": "Utilities",
+      "industry": "Utilities",
+      "ticker": "APA.AX",
+      "family": "industrial",
+      "peers": [
+        "AGL",
+        "ORG",
+        "MEZ"
+      ]
+    },
+    {
+      "code": "MEZ",
+      "name": "Meridian Energy",
+      "sector": "Utilities",
+      "industry": "Utilities",
+      "ticker": "MEZ.AX",
+      "family": "industrial",
+      "peers": [
+        "AGL",
+        "ORG",
+        "APA"
+      ]
+    },
+    {
+      "code": "TCL",
+      "name": "Transurban Group",
+      "sector": "Industrials",
+      "industry": "Transport Infrastructure",
+      "ticker": "TCL.AX",
+      "family": "industrial",
+      "peers": [
+        "ALX",
+        "AZJ",
+        "AIA"
+      ]
+    },
+    {
+      "code": "ALX",
+      "name": "Atlas Arteria",
+      "sector": "Industrials",
+      "industry": "Transport Infrastructure",
+      "ticker": "ALX.AX",
+      "family": "industrial",
+      "peers": [
+        "TCL",
+        "AZJ",
+        "AIA"
+      ]
+    },
+    {
+      "code": "AZJ",
+      "name": "Aurizon Holdings",
+      "sector": "Industrials",
+      "industry": "Transport Infrastructure",
+      "ticker": "AZJ.AX",
+      "family": "industrial",
+      "peers": [
+        "TCL",
+        "ALX",
+        "AIA"
+      ]
+    },
+    {
+      "code": "AIA",
+      "name": "Auckland International Airport",
+      "sector": "Industrials",
+      "industry": "Transport Infrastructure",
+      "ticker": "AIA.AX",
+      "family": "industrial",
+      "peers": [
+        "TCL",
+        "ALX",
+        "AZJ"
+      ]
+    },
+    {
+      "code": "QAN",
+      "name": "Qantas Airways",
+      "sector": "Industrials",
+      "industry": "Airlines",
+      "ticker": "QAN.AX",
+      "family": "industrial",
+      "peers": [
+        "TCL",
+        "ALX",
+        "AIA",
+        "AZJ",
+        "QUB"
+      ]
+    },
+    {
+      "code": "BXB",
+      "name": "Brambles",
+      "sector": "Industrials",
+      "industry": "Commercial Services",
+      "ticker": "BXB.AX",
+      "family": "industrial",
+      "peers": [
+        "CWY",
+        "ALQ"
+      ]
+    },
+    {
+      "code": "CWY",
+      "name": "Cleanaway Waste Management",
+      "sector": "Industrials",
+      "industry": "Commercial Services",
+      "ticker": "CWY.AX",
+      "family": "industrial",
+      "peers": [
+        "BXB",
+        "ALQ"
+      ]
+    },
+    {
+      "code": "ALQ",
+      "name": "ALS Limited",
+      "sector": "Industrials",
+      "industry": "Commercial Services",
+      "ticker": "ALQ.AX",
+      "family": "industrial",
+      "peers": [
+        "BXB",
+        "CWY"
+      ]
+    },
+    {
+      "code": "SGH",
+      "name": "SGH Limited",
+      "sector": "Industrials",
+      "industry": "Capital Goods",
+      "ticker": "SGH.AX",
+      "family": "industrial",
+      "peers": [
+        "REH",
+        "RWC"
+      ]
+    },
+    {
+      "code": "REH",
+      "name": "Reece",
+      "sector": "Industrials",
+      "industry": "Capital Goods",
+      "ticker": "REH.AX",
+      "family": "industrial",
+      "peers": [
+        "SGH",
+        "RWC"
+      ]
+    },
+    {
+      "code": "RWC",
+      "name": "Reliance Worldwide Corporation",
+      "sector": "Industrials",
+      "industry": "Capital Goods",
+      "ticker": "RWC.AX",
+      "family": "industrial",
+      "peers": [
+        "SGH",
+        "REH"
+      ]
+    },
+    {
+      "code": "DOW",
+      "name": "Downer EDI",
+      "sector": "Industrials",
+      "industry": "Construction & Engineering",
+      "ticker": "DOW.AX",
+      "family": "industrial",
+      "peers": [
+        "MND",
+        "VNT"
+      ]
+    },
+    {
+      "code": "MND",
+      "name": "Monadelphous Group",
+      "sector": "Industrials",
+      "industry": "Construction & Engineering",
+      "ticker": "MND.AX",
+      "family": "industrial",
+      "peers": [
+        "DOW",
+        "VNT"
+      ]
+    },
+    {
+      "code": "VNT",
+      "name": "Ventia Services Group",
+      "sector": "Industrials",
+      "industry": "Construction & Engineering",
+      "ticker": "VNT.AX",
+      "family": "industrial",
+      "peers": [
+        "DOW",
+        "MND"
+      ]
+    },
+    {
+      "code": "CSL",
+      "name": "CSL Limited",
+      "sector": "Health Care",
+      "industry": "Biotechnology & Pharmaceuticals",
+      "ticker": "CSL.AX",
+      "family": "industrial",
+      "peers": [
+        "TLX"
+      ]
+    },
+    {
+      "code": "TLX",
+      "name": "Telix Pharmaceuticals",
+      "sector": "Health Care",
+      "industry": "Biotechnology & Pharmaceuticals",
+      "ticker": "TLX.AX",
+      "family": "industrial",
+      "peers": [
+        "CSL"
+      ]
+    },
+    {
+      "code": "RMD",
+      "name": "ResMed",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "ticker": "RMD.AX",
+      "family": "industrial",
+      "peers": [
+        "COH",
+        "FPH",
+        "ANN"
+      ]
+    },
+    {
+      "code": "COH",
+      "name": "Cochlear",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "ticker": "COH.AX",
+      "family": "industrial",
+      "peers": [
+        "RMD",
+        "FPH",
+        "ANN"
+      ]
+    },
+    {
+      "code": "FPH",
+      "name": "Fisher & Paykel Healthcare",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "ticker": "FPH.AX",
+      "family": "industrial",
+      "peers": [
+        "RMD",
+        "COH",
+        "ANN"
+      ]
+    },
+    {
+      "code": "ANN",
+      "name": "Ansell",
+      "sector": "Health Care",
+      "industry": "Health Care Equipment",
+      "ticker": "ANN.AX",
+      "family": "industrial",
+      "peers": [
+        "RMD",
+        "COH",
+        "FPH"
+      ]
+    },
+    {
+      "code": "PME",
+      "name": "Pro Medicus",
+      "sector": "Health Care",
+      "industry": "Health Care Technology",
+      "ticker": "PME.AX",
+      "family": "industrial",
+      "peers": [
+        "RMD",
+        "COH",
+        "FPH",
+        "CSL",
+        "WTC",
+        "XRO"
+      ]
+    },
+    {
+      "code": "SHL",
+      "name": "Sonic Healthcare",
+      "sector": "Health Care",
+      "industry": "Health Care Services",
+      "ticker": "SHL.AX",
+      "family": "industrial",
+      "peers": [
+        "RHC",
+        "EBO",
+        "SIG"
+      ]
+    },
+    {
+      "code": "RHC",
+      "name": "Ramsay Health Care",
+      "sector": "Health Care",
+      "industry": "Health Care Services",
+      "ticker": "RHC.AX",
+      "family": "industrial",
+      "peers": [
+        "SHL",
+        "EBO",
+        "SIG"
+      ]
+    },
+    {
+      "code": "EBO",
+      "name": "Ebos Group",
+      "sector": "Health Care",
+      "industry": "Health Care Services",
+      "ticker": "EBO.AX",
+      "family": "industrial",
+      "peers": [
+        "SHL",
+        "RHC",
+        "SIG"
+      ]
+    },
+    {
+      "code": "SIG",
+      "name": "Sigma Healthcare",
+      "sector": "Health Care",
+      "industry": "Health Care Services",
+      "ticker": "SIG.AX",
+      "family": "industrial",
+      "peers": [
+        "SHL",
+        "RHC",
+        "EBO"
+      ]
+    },
+    {
+      "code": "WOW",
+      "name": "Woolworths Group",
+      "sector": "Consumer Staples",
+      "industry": "Food & Staples Retailing",
+      "ticker": "WOW.AX",
+      "family": "industrial",
+      "peers": [
+        "COL",
+        "EDV",
+        "MTS"
+      ]
+    },
+    {
+      "code": "COL",
+      "name": "Coles Group",
+      "sector": "Consumer Staples",
+      "industry": "Food & Staples Retailing",
+      "ticker": "COL.AX",
+      "family": "industrial",
+      "peers": [
+        "WOW",
+        "EDV",
+        "MTS"
+      ]
+    },
+    {
+      "code": "EDV",
+      "name": "Endeavour Group",
+      "sector": "Consumer Staples",
+      "industry": "Food & Staples Retailing",
+      "ticker": "EDV.AX",
+      "family": "industrial",
+      "peers": [
+        "WOW",
+        "COL",
+        "MTS"
+      ]
+    },
+    {
+      "code": "MTS",
+      "name": "Metcash",
+      "sector": "Consumer Staples",
+      "industry": "Food & Staples Retailing",
+      "ticker": "MTS.AX",
+      "family": "industrial",
+      "peers": [
+        "WOW",
+        "COL",
+        "EDV"
+      ]
+    },
+    {
+      "code": "TWE",
+      "name": "Treasury Wine Estates",
+      "sector": "Consumer Staples",
+      "industry": "Beverages",
+      "ticker": "TWE.AX",
+      "family": "industrial",
+      "peers": [
+        "EDV",
+        "A2M",
+        "BGA",
+        "WOW",
+        "COL"
+      ]
+    },
+    {
+      "code": "A2M",
+      "name": "The a2 Milk Company",
+      "sector": "Consumer Staples",
+      "industry": "Food Products",
+      "ticker": "A2M.AX",
+      "family": "industrial",
+      "peers": [
+        "BGA",
+        "GNC",
+        "ING",
+        "ELD"
+      ]
+    },
+    {
+      "code": "BGA",
+      "name": "Bega Cheese",
+      "sector": "Consumer Staples",
+      "industry": "Food Products",
+      "ticker": "BGA.AX",
+      "family": "industrial",
+      "peers": [
+        "A2M",
+        "GNC",
+        "ING",
+        "ELD"
+      ]
+    },
+    {
+      "code": "GNC",
+      "name": "GrainCorp",
+      "sector": "Consumer Staples",
+      "industry": "Food Products",
+      "ticker": "GNC.AX",
+      "family": "industrial",
+      "peers": [
+        "A2M",
+        "BGA",
+        "ING",
+        "ELD"
+      ]
+    },
+    {
+      "code": "ING",
+      "name": "Inghams Group",
+      "sector": "Consumer Staples",
+      "industry": "Food Products",
+      "ticker": "ING.AX",
+      "family": "industrial",
+      "peers": [
+        "A2M",
+        "BGA",
+        "GNC",
+        "ELD"
+      ]
+    },
+    {
+      "code": "ELD",
+      "name": "Elders",
+      "sector": "Consumer Staples",
+      "industry": "Food Products",
+      "ticker": "ELD.AX",
+      "family": "industrial",
+      "peers": [
+        "A2M",
+        "BGA",
+        "GNC",
+        "ING"
+      ]
+    },
+    {
+      "code": "WES",
+      "name": "Wesfarmers",
+      "sector": "Consumer Discretionary",
+      "industry": "Retailing",
+      "ticker": "WES.AX",
+      "family": "industrial",
+      "peers": [
+        "JBH",
+        "SUL",
+        "PMV",
+        "HVN",
+        "LOV",
+        "NCK",
+        "BAP",
+        "ARB"
+      ]
+    },
+    {
+      "code": "JBH",
+      "name": "JB Hi-Fi",
+      "sector": "Consumer Discretionary",
+      "industry": "Retailing",
+      "ticker": "JBH.AX",
+      "family": "industrial",
+      "peers": [
+        "WES",
+        "SUL",
+        "PMV",
+        "HVN",
+        "LOV",
+        "NCK",
+        "BAP",
+        "ARB"
+      ]
+    },
+    {
+      "code": "SUL",
+      "name": "Super Retail Group",
+      "sector": "Consumer Discretionary",
+      "industry": "Retailing",
+      "ticker": "SUL.AX",
+      "family": "industrial",
+      "peers": [
+        "WES",
+        "JBH",
+        "PMV",
+        "HVN",
+        "LOV",
+        "NCK",
+        "BAP",
+        "ARB"
+      ]
+    },
+    {
+      "code": "PMV",
+      "name": "Premier Investments",
+      "sector": "Consumer Discretionary",
+      "industry": "Retailing",
+      "ticker": "PMV.AX",
+      "family": "industrial",
+      "peers": [
+        "WES",
+        "JBH",
+        "SUL",
+        "HVN",
+        "LOV",
+        "NCK",
+        "BAP",
+        "ARB"
+      ]
+    },
+    {
+      "code": "HVN",
+      "name": "Harvey Norman Holdings",
+      "sector": "Consumer Discretionary",
+      "industry": "Retailing",
+      "ticker": "HVN.AX",
+      "family": "industrial",
+      "peers": [
+        "WES",
+        "JBH",
+        "SUL",
+        "PMV",
+        "LOV",
+        "NCK",
+        "BAP",
+        "ARB"
+      ]
+    },
+    {
+      "code": "LOV",
+      "name": "Lovisa Holdings",
+      "sector": "Consumer Discretionary",
+      "industry": "Retailing",
+      "ticker": "LOV.AX",
+      "family": "industrial",
+      "peers": [
+        "WES",
+        "JBH",
+        "SUL",
+        "PMV",
+        "HVN",
+        "NCK",
+        "BAP",
+        "ARB"
+      ]
+    },
+    {
+      "code": "NCK",
+      "name": "Nick Scali",
+      "sector": "Consumer Discretionary",
+      "industry": "Retailing",
+      "ticker": "NCK.AX",
+      "family": "industrial",
+      "peers": [
+        "WES",
+        "JBH",
+        "SUL",
+        "PMV",
+        "HVN",
+        "LOV",
+        "BAP",
+        "ARB"
+      ]
+    },
+    {
+      "code": "BAP",
+      "name": "Bapcor",
+      "sector": "Consumer Discretionary",
+      "industry": "Retailing",
+      "ticker": "BAP.AX",
+      "family": "industrial",
+      "peers": [
+        "WES",
+        "JBH",
+        "SUL",
+        "PMV",
+        "HVN",
+        "LOV",
+        "NCK",
+        "ARB"
+      ]
+    },
+    {
+      "code": "ARB",
+      "name": "ARB Corporation",
+      "sector": "Consumer Discretionary",
+      "industry": "Retailing",
+      "ticker": "ARB.AX",
+      "family": "industrial",
+      "peers": [
+        "WES",
+        "JBH",
+        "SUL",
+        "PMV",
+        "HVN",
+        "LOV",
+        "NCK",
+        "BAP"
+      ]
+    },
+    {
+      "code": "BRG",
+      "name": "Breville Group",
+      "sector": "Consumer Discretionary",
+      "industry": "Consumer Durables",
+      "ticker": "BRG.AX",
+      "family": "industrial",
+      "peers": [
+        "JBH",
+        "HVN",
+        "NCK",
+        "ARB",
+        "WES"
+      ]
+    },
+    {
+      "code": "ALL",
+      "name": "Aristocrat Leisure",
+      "sector": "Consumer Discretionary",
+      "industry": "Gaming & Leisure",
+      "ticker": "ALL.AX",
+      "family": "industrial",
+      "peers": [
+        "TLC",
+        "TAH"
+      ]
+    },
+    {
+      "code": "TLC",
+      "name": "The Lottery Corporation",
+      "sector": "Consumer Discretionary",
+      "industry": "Gaming & Leisure",
+      "ticker": "TLC.AX",
+      "family": "industrial",
+      "peers": [
+        "ALL",
+        "TAH"
+      ]
+    },
+    {
+      "code": "TAH",
+      "name": "Tabcorp Holdings",
+      "sector": "Consumer Discretionary",
+      "industry": "Gaming & Leisure",
+      "ticker": "TAH.AX",
+      "family": "industrial",
+      "peers": [
+        "ALL",
+        "TLC"
+      ]
+    },
+    {
+      "code": "DMP",
+      "name": "Domino's Pizza Enterprises",
+      "sector": "Consumer Discretionary",
+      "industry": "Consumer Services",
+      "ticker": "DMP.AX",
+      "family": "industrial",
+      "peers": [
+        "FLT",
+        "WEB",
+        "CTD",
+        "IEL"
+      ]
+    },
+    {
+      "code": "FLT",
+      "name": "Flight Centre Travel Group",
+      "sector": "Consumer Discretionary",
+      "industry": "Consumer Services",
+      "ticker": "FLT.AX",
+      "family": "industrial",
+      "peers": [
+        "DMP",
+        "WEB",
+        "CTD",
+        "IEL"
+      ]
+    },
+    {
+      "code": "WEB",
+      "name": "Web Travel Group",
+      "sector": "Consumer Discretionary",
+      "industry": "Consumer Services",
+      "ticker": "WEB.AX",
+      "family": "industrial",
+      "peers": [
+        "DMP",
+        "FLT",
+        "CTD",
+        "IEL"
+      ]
+    },
+    {
+      "code": "CTD",
+      "name": "Corporate Travel Management",
+      "sector": "Consumer Discretionary",
+      "industry": "Consumer Services",
+      "ticker": "CTD.AX",
+      "family": "industrial",
+      "peers": [
+        "DMP",
+        "FLT",
+        "WEB",
+        "IEL"
+      ]
+    },
+    {
+      "code": "IEL",
+      "name": "IDP Education",
+      "sector": "Consumer Discretionary",
+      "industry": "Consumer Services",
+      "ticker": "IEL.AX",
+      "family": "industrial",
+      "peers": [
+        "DMP",
+        "FLT",
+        "WEB",
+        "CTD"
+      ]
+    },
+    {
+      "code": "TLS",
+      "name": "Telstra Group",
+      "sector": "Communication Services",
+      "industry": "Telecommunications",
+      "ticker": "TLS.AX",
+      "family": "industrial",
+      "peers": [
+        "TPG",
+        "SPK"
+      ]
+    },
+    {
+      "code": "TPG",
+      "name": "TPG Telecom",
+      "sector": "Communication Services",
+      "industry": "Telecommunications",
+      "ticker": "TPG.AX",
+      "family": "industrial",
+      "peers": [
+        "TLS",
+        "SPK"
+      ]
+    },
+    {
+      "code": "SPK",
+      "name": "Spark New Zealand",
+      "sector": "Communication Services",
+      "industry": "Telecommunications",
+      "ticker": "SPK.AX",
+      "family": "industrial",
+      "peers": [
+        "TLS",
+        "TPG"
+      ]
+    },
+    {
+      "code": "REA",
+      "name": "REA Group",
+      "sector": "Communication Services",
+      "industry": "Interactive Media",
+      "ticker": "REA.AX",
+      "family": "industrial",
+      "peers": [
+        "SEK",
+        "CAR"
+      ]
+    },
+    {
+      "code": "SEK",
+      "name": "SEEK",
+      "sector": "Communication Services",
+      "industry": "Interactive Media",
+      "ticker": "SEK.AX",
+      "family": "industrial",
+      "peers": [
+        "REA",
+        "CAR"
+      ]
+    },
+    {
+      "code": "CAR",
+      "name": "CAR Group",
+      "sector": "Communication Services",
+      "industry": "Interactive Media",
+      "ticker": "CAR.AX",
+      "family": "industrial",
+      "peers": [
+        "REA",
+        "SEK"
+      ]
+    },
+    {
+      "code": "NWS",
+      "name": "News Corporation",
+      "sector": "Communication Services",
+      "industry": "Media",
+      "ticker": "NWS.AX",
+      "family": "industrial",
+      "peers": [
+        "NEC"
+      ]
+    },
+    {
+      "code": "NEC",
+      "name": "Nine Entertainment",
+      "sector": "Communication Services",
+      "industry": "Media",
+      "ticker": "NEC.AX",
+      "family": "industrial",
+      "peers": [
+        "NWS"
+      ]
+    },
+    {
+      "code": "XRO",
+      "name": "Xero",
+      "sector": "Information Technology",
+      "industry": "Software",
+      "ticker": "XRO.AX",
+      "family": "industrial",
+      "peers": [
+        "WTC",
+        "TNE",
+        "SDR",
+        "IRE",
+        "PXA"
+      ]
+    },
+    {
+      "code": "WTC",
+      "name": "WiseTech Global",
+      "sector": "Information Technology",
+      "industry": "Software",
+      "ticker": "WTC.AX",
+      "family": "industrial",
+      "peers": [
+        "XRO",
+        "TNE",
+        "SDR",
+        "IRE",
+        "PXA"
+      ]
+    },
+    {
+      "code": "TNE",
+      "name": "TechnologyOne",
+      "sector": "Information Technology",
+      "industry": "Software",
+      "ticker": "TNE.AX",
+      "family": "industrial",
+      "peers": [
+        "XRO",
+        "WTC",
+        "SDR",
+        "IRE",
+        "PXA"
+      ]
+    },
+    {
+      "code": "SDR",
+      "name": "SiteMinder",
+      "sector": "Information Technology",
+      "industry": "Software",
+      "ticker": "SDR.AX",
+      "family": "industrial",
+      "peers": [
+        "XRO",
+        "WTC",
+        "TNE",
+        "IRE",
+        "PXA"
+      ]
+    },
+    {
+      "code": "IRE",
+      "name": "Iress",
+      "sector": "Information Technology",
+      "industry": "Software",
+      "ticker": "IRE.AX",
+      "family": "industrial",
+      "peers": [
+        "XRO",
+        "WTC",
+        "TNE",
+        "SDR",
+        "PXA"
+      ]
+    },
+    {
+      "code": "PXA",
+      "name": "Pexa Group",
+      "sector": "Information Technology",
+      "industry": "Software",
+      "ticker": "PXA.AX",
+      "family": "industrial",
+      "peers": [
+        "XRO",
+        "WTC",
+        "TNE",
+        "SDR",
+        "IRE"
+      ]
+    },
+    {
+      "code": "NXT",
+      "name": "NEXTDC",
+      "sector": "Information Technology",
+      "industry": "IT Services & Data Centres",
+      "ticker": "NXT.AX",
+      "family": "industrial",
+      "peers": [
+        "MP1",
+        "WTC",
+        "XRO",
+        "TNE",
+        "GMG"
+      ]
+    },
+    {
+      "code": "MP1",
+      "name": "Megaport",
+      "sector": "Information Technology",
+      "industry": "IT Services & Data Centres",
+      "ticker": "MP1.AX",
+      "family": "industrial",
+      "peers": [
+        "NXT",
+        "WTC",
+        "XRO",
+        "TNE",
+        "SDR"
+      ]
+    },
+    {
+      "code": "GMG",
+      "name": "Goodman Group",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "GMG.AX",
+      "family": "reit",
+      "peers": [
+        "SCG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CHC",
+        "CLW",
+        "BWP",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "SCG",
+      "name": "Scentre Group",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "SCG.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CHC",
+        "CLW",
+        "BWP",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "VCX",
+      "name": "Vicinity Centres",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "VCX.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "DXS",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CHC",
+        "CLW",
+        "BWP",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "DXS",
+      "name": "Dexus",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "DXS.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CHC",
+        "CLW",
+        "BWP",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "GPT",
+      "name": "GPT Group",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "GPT.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "DXS",
+        "MGR",
+        "SGP",
+        "CHC",
+        "CLW",
+        "BWP",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "MGR",
+      "name": "Mirvac Group",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "MGR.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "SGP",
+        "CHC",
+        "CLW",
+        "BWP",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "SGP",
+      "name": "Stockland",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "SGP.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "MGR",
+        "CHC",
+        "CLW",
+        "BWP",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "CHC",
+      "name": "Charter Hall Group",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "CHC.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CLW",
+        "BWP",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "CLW",
+      "name": "Charter Hall Long WALE REIT",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "CLW.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CHC",
+        "BWP",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "BWP",
+      "name": "BWP Trust",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "BWP.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CHC",
+        "CLW",
+        "CQR",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "CQR",
+      "name": "Charter Hall Retail REIT",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "CQR.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CHC",
+        "CLW",
+        "BWP",
+        "INA",
+        "ARF"
+      ]
+    },
+    {
+      "code": "INA",
+      "name": "Ingenia Communities Group",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "INA.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CHC",
+        "CLW",
+        "BWP",
+        "CQR",
+        "ARF"
+      ]
+    },
+    {
+      "code": "ARF",
+      "name": "Arena REIT",
+      "sector": "Real Estate",
+      "industry": "REITs",
+      "ticker": "ARF.AX",
+      "family": "reit",
+      "peers": [
+        "GMG",
+        "SCG",
+        "VCX",
+        "DXS",
+        "GPT",
+        "MGR",
+        "SGP",
+        "CHC",
+        "CLW",
+        "BWP",
+        "CQR",
+        "INA"
+      ]
+    },
+    {
+      "code": "HMC",
+      "name": "HMC Capital",
+      "sector": "Real Estate",
+      "industry": "Real Estate Services",
+      "ticker": "HMC.AX",
+      "family": "reit",
+      "peers": [
+        "CHC",
+        "GMG",
+        "DXS",
+        "MGR",
+        "SGP"
+      ]
+    },
+    {
+      "code": "LLC",
+      "name": "Lendlease Group",
+      "sector": "Real Estate",
+      "industry": "Real Estate Services",
+      "ticker": "LLC.AX",
+      "family": "reit",
+      "peers": [
+        "MGR",
+        "SGP",
+        "DXS",
+        "GPT",
+        "CHC"
+      ]
+    }
+  ],
+  "benchmarks": [
+    {
+      "label": "S&P/ASX 200",
+      "symbol": "^AXJO",
+      "kind": "Equity index"
+    },
+    {
+      "label": "All Ordinaries",
+      "symbol": "^AORD",
+      "kind": "Equity index"
+    },
+    {
+      "label": "S&P/ASX 200 Financials",
+      "symbol": "^AXFJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 Materials",
+      "symbol": "^AXMJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 Energy",
+      "symbol": "^AXEJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 Health Care",
+      "symbol": "^AXHJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 Industrials",
+      "symbol": "^AXNJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 Cons. Disc.",
+      "symbol": "^AXDJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 Cons. Staples",
+      "symbol": "^AXSJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 Info Tech",
+      "symbol": "^AXIJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 Comm. Services",
+      "symbol": "^AXTJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 Utilities",
+      "symbol": "^AXUJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P/ASX 200 A-REIT",
+      "symbol": "^AXPJ",
+      "kind": "Sector index"
+    },
+    {
+      "label": "S&P 500",
+      "symbol": "^GSPC",
+      "kind": "Equity index"
+    },
+    {
+      "label": "Nasdaq Composite",
+      "symbol": "^IXIC",
+      "kind": "Equity index"
+    },
+    {
+      "label": "MSCI World (iShares URTH)",
+      "symbol": "URTH",
+      "kind": "Equity index"
+    },
+    {
+      "label": "MSCI EM (iShares EEM)",
+      "symbol": "EEM",
+      "kind": "Equity index"
+    },
+    {
+      "label": "US 13-week T-bill yield",
+      "symbol": "^IRX",
+      "kind": "Rate (%)"
+    },
+    {
+      "label": "US 5-year Treasury yield",
+      "symbol": "^FVX",
+      "kind": "Rate (%)"
+    },
+    {
+      "label": "US 10-year Treasury yield",
+      "symbol": "^TNX",
+      "kind": "Rate (%)"
+    },
+    {
+      "label": "US 30-year Treasury yield",
+      "symbol": "^TYX",
+      "kind": "Rate (%)"
+    },
+    {
+      "label": "CBOE VIX",
+      "symbol": "^VIX",
+      "kind": "Volatility"
+    },
+    {
+      "label": "Gold (COMEX)",
+      "symbol": "GC=F",
+      "kind": "Commodity"
+    },
+    {
+      "label": "Copper (COMEX)",
+      "symbol": "HG=F",
+      "kind": "Commodity"
+    },
+    {
+      "label": "Crude oil (WTI)",
+      "symbol": "CL=F",
+      "kind": "Commodity"
+    },
+    {
+      "label": "Brent crude",
+      "symbol": "BZ=F",
+      "kind": "Commodity"
+    },
+    {
+      "label": "Natural gas (Henry Hub)",
+      "symbol": "NG=F",
+      "kind": "Commodity"
+    },
+    {
+      "label": "S&P GSCI Commodity",
+      "symbol": "^SPGSCI",
+      "kind": "Commodity"
+    }
+  ],
+  "sectorIndexMap": {
+    "Financials": "^AXFJ",
+    "Materials": "^AXMJ",
+    "Energy": "^AXEJ",
+    "Health Care": "^AXHJ",
+    "Industrials": "^AXNJ",
+    "Consumer Discretionary": "^AXDJ",
+    "Consumer Staples": "^AXSJ",
+    "Information Technology": "^AXIJ",
+    "Communication Services": "^AXTJ",
+    "Utilities": "^AXUJ",
+    "Real Estate": "^AXPJ"
+  },
+  "fxPairs": [
+    {
+      "label": "AUD / USD",
+      "symbol": "AUDUSD=X"
+    },
+    {
+      "label": "AUD / NZD",
+      "symbol": "AUDNZD=X"
+    },
+    {
+      "label": "AUD / JPY",
+      "symbol": "AUDJPY=X"
+    },
+    {
+      "label": "AUD / GBP",
+      "symbol": "AUDGBP=X"
+    },
+    {
+      "label": "AUD / EUR",
+      "symbol": "AUDEUR=X"
+    },
+    {
+      "label": "AUD / CNY",
+      "symbol": "AUDCNY=X"
+    },
+    {
+      "label": "USD / AUD",
+      "symbol": "AUD=X"
+    }
+  ],
+  "familyLabels": {
+    "bank": "Bank — dividend discount (franked), excess-returns P/B and peer multiples",
+    "insurer": "Insurer — dividend discount (franked), excess-returns P/B and peer multiples",
+    "financial": "Financial — dividend discount (franked), excess-returns P/B and peer multiples",
+    "reit": "REIT — distribution model, NTA (P/B) and peer multiples",
+    "industrial": "Industrial — unlevered FCFF DCF, peer multiples and dividend cross-check"
+  }
+}

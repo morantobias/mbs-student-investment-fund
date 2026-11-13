@@ -1,0 +1,26 @@
+# Web app — dependencies and build output
+webapp/node_modules/
+webapp/dist/
+webapp/*.tsbuildinfo
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs & OS cruft
+*.log
+.DS_Store
+Thumbs.db
+
+# Transient data dumps / empty scratch files
+ASX_Listed_Companies_*.csv
+westpac_xml.xml
+* (COPY).docx
