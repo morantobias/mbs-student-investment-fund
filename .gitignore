@@ -8,6 +8,7 @@ webapp/*.tsbuildinfo
 .Rhistory
 .RData
 .Ruserdata
+cache/
 
 # Python
 __pycache__/

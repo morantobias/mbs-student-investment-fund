@@ -177,6 +177,53 @@ asx_universe <- tibble::tribble(
 
 asx_universe <- dplyr::mutate(asx_universe, ticker = paste0(code, ".AX"))
 
+# --- Full ASX coverage ----------------------------------------------------------
+# The curated universe above is S&P/ASX 200-centric. Append every remaining ASX
+# listing from data/asx_listed.csv so the screener can catch the whole market.
+gics_sector_map <- c(
+  "Banks" = "Financials", "Financial Services" = "Financials", "Insurance" = "Financials",
+  "Diversified Financials" = "Financials",
+  "Materials" = "Materials", "Energy" = "Energy",
+  "Software & Services" = "Information Technology",
+  "Technology Hardware & Equipment" = "Information Technology",
+  "Semiconductors & Semiconductor Equipment" = "Information Technology",
+  "Pharmaceuticals, Biotechnology & Life Sciences" = "Health Care",
+  "Health Care Equipment & Services" = "Health Care",
+  "Capital Goods" = "Industrials", "Commercial & Professional Services" = "Industrials",
+  "Transportation" = "Industrials",
+  "Consumer Services" = "Consumer Discretionary",
+  "Consumer Discretionary Distribution & Retail" = "Consumer Discretionary",
+  "Consumer Durables & Apparel" = "Consumer Discretionary",
+  "Automobiles & Components" = "Consumer Discretionary",
+  "Food, Beverage & Tobacco" = "Consumer Staples",
+  "Household & Personal Products" = "Consumer Staples",
+  "Consumer Staples Distribution & Retail" = "Consumer Staples",
+  "Media & Entertainment" = "Communication Services",
+  "Telecommunication Services" = "Communication Services",
+  "Utilities" = "Utilities",
+  "Equity Real Estate Investment Trusts (REITs)" = "Real Estate",
+  "Real Estate Management & Development" = "Real Estate"
+)
+
+append_asx_listings <- function(u, path) {
+  raw <- utils::read.csv(path, stringsAsFactors = FALSE, check.names = FALSE)
+  code <- toupper(trimws(raw[["ASX code"]]))
+  nm   <- trimws(raw[["Company name"]])
+  ind  <- trimws(raw[["GICs industry group"]])
+  ind[ind == "Not Applic"] <- "Diversified Financials"
+  ind[ind == "Class Pend"] <- "Unclassified"
+  sector <- unname(gics_sector_map[ind])
+  sector[is.na(sector)] <- "Unclassified"
+  add <- tibble::tibble(code = code, name = nm, sector = sector, industry = ind, peers = "")
+  add <- add[nzchar(add$code) & !duplicated(add$code) & !add$code %in% u$code, ]
+  add$name <- tools::toTitleCase(tolower(add$name))
+  dplyr::bind_rows(u, dplyr::mutate(add, ticker = paste0(code, ".AX")))
+}
+
+asx_universe <- append_asx_listings(asx_universe, file.path("data", "asx_listed.csv"))
+# The workstation covers the Financials GICS sector only.
+asx_universe <- asx_universe[asx_universe$sector == "Financials", ]
+
 # Industry -> valuation model family -------------------------------------------
 # bank / insurer / financial : dividend + excess-returns models, no FCFF DCF
 # reit                       : distribution model + NTA (P/B) + multiples

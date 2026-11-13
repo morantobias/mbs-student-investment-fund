@@ -18,7 +18,14 @@
 .cache_quotes <- cachem::cache_mem(max_size = 50 * 1024^2, max_age = 10 * 60)
 .cache_meta   <- cachem::cache_mem(max_size = 50 * 1024^2, max_age = 15 * 60)
 
-.cache_dir <- tryCatch(tools::R_user_dir("mbs-sif", "cache"), error = function(e) file.path(tempdir(), "mbs-sif-cache"))
+# Project-local cache directory. Keeping the cache inside the project (rather
+# than tools::R_user_dir) means it persists on hosted platforms such as Posit
+# Cloud, whose project workspace survives between sessions.
+.cache_dir <- tryCatch({
+  d <- file.path("cache")
+  dir.create(d, recursive = TRUE, showWarnings = FALSE)
+  d
+}, error = function(e) tryCatch(tools::R_user_dir("mbs-sif", "cache"), error = function(e2) tempdir()))
 .cache_fund <- tryCatch({
   dir.create(file.path(.cache_dir, "fundamentals"), recursive = TRUE, showWarnings = FALSE)
   cachem::cache_disk(file.path(.cache_dir, "fundamentals"), max_size = 500 * 1024^2, max_age = 12 * 3600)

@@ -80,10 +80,7 @@ mbs_sidebar <- function() {
         div(class = "brand-text",
             div(class = "brand-title", "Student Investment Fund"),
             div(class = "brand-sub", "Equity Research"))),
-    div(class = "mbs-nav", blocks),
-    div(class = "mbs-sidebar-foot",
-        "Data: Yahoo Finance · delayed", tags$br(),
-        "Valuation engine runs locally")
+    div(class = "mbs-nav", blocks)
   )
 }
 
@@ -303,7 +300,7 @@ tab_sector_universe <- nav_panel("Universe options", value = "sector_universe", 
     sliderInput("scr_mcap", "Market cap ($bn)", 0, 300, c(0, 300), step = 5),
     sliderInput("scr_mos", "Margin of safety (%)", -100, 100, c(-100, 100), step = 5),
     actionButton("sector_load", "Run screen", class = "btn-primary btn-sm", icon = icon("magnifying-glass-chart")),
-    muted("Loads live quotes, statements and one-year prices for every name in the selection (about 10–60 seconds).")
+    muted("Loads live quotes, statements and one-year prices for every name in the selection. The full Financials universe (~200 names) takes a few minutes — filter to an industry for a faster screen.")
   )
 )
 
@@ -358,9 +355,5 @@ ui <- page_fluid(
       tab_overview, tab_market, tab_financials, tab_ratios, tab_peers, tab_peer_universe,
       tab_valuation, tab_valuation_assumptions, tab_sector, tab_sector_universe, tab_bench, tab_export
     )
-  ),
-  div(class = "mbs-footer",
-    div(class = "left", strong("Melbourne Business School — Student Investment Fund"), " · 200 Leicester Street, Carlton VIC 3053 · CRICOS Provider No. 00116K"),
-    div(class = "right", "v", APP_VERSION, " · ", DISCLAIMER)
   )
 )
