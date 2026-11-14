@@ -214,10 +214,39 @@ append_asx_listings <- function(u, path) {
   ind[ind == "Class Pend"] <- "Unclassified"
   sector <- unname(gics_sector_map[ind])
   sector[is.na(sector)] <- "Unclassified"
-  add <- tibble::tibble(code = code, name = nm, sector = sector, industry = ind, peers = "")
+  # Listing market cap (AUD) — a snapshot used only to pre-filter the screen
+  # before any live data is fetched; "--" and blanks become NA and are kept.
+  mcap <- suppressWarnings(as.numeric(gsub(",", "", raw[["Market Cap"]])))
+  mcap <- mcap[!duplicated(code)]
+  cap_map <- setNames(mcap, code[!duplicated(code)])
+  add <- tibble::tibble(code = code, name = nm, sector = sector, industry = ind, peers = "",
+                        market_cap = unname(cap_map[code]))
   add <- add[nzchar(add$code) & !duplicated(add$code) & !add$code %in% u$code, ]
   add$name <- tools::toTitleCase(tolower(add$name))
+  u$market_cap <- unname(cap_map[u$code])
   dplyr::bind_rows(u, dplyr::mutate(add, ticker = paste0(code, ".AX")))
+}
+
+# Static (zero-network) pre-screen: the dimensions we know from the curated
+# universe and the ASX listing snapshot before fetching anything. Returns the
+# universe rows that can pass sector, industry and market-cap criteria so the
+# screener only pulls live statements for candidates that might match.
+screen_candidates <- function(sector = "ALL", industry = "All industries", mcap_bn = NULL) {
+  u <- asx_universe
+  if (!is.null(sector) && nzchar(sector) && !identical(sector, "ALL")) {
+    u <- u[u$sector == sector, , drop = FALSE]
+  }
+  if (!is.null(industry) && nzchar(industry) && !identical(industry, "All industries")) {
+    u <- u[u$industry == industry, , drop = FALSE]
+  }
+  if (!is.null(mcap_bn) && length(mcap_bn) == 2) {
+    lo <- as.numeric(mcap_bn[1]) * 1e9
+    hi <- if (as.numeric(mcap_bn[2]) >= 300) Inf else as.numeric(mcap_bn[2]) * 1e9
+    mc <- suppressWarnings(as.numeric(u$market_cap))
+    keep <- is.na(mc) | (mc >= lo & mc <= hi)
+    u <- u[keep, , drop = FALSE]
+  }
+  u
 }
 
 asx_universe <- append_asx_listings(asx_universe, file.path("data", "asx_listed.csv"))

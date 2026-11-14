@@ -300,7 +300,7 @@ tab_sector_universe <- nav_panel("Universe options", value = "sector_universe", 
     sliderInput("scr_mcap", "Market cap ($bn)", 0, 300, c(0, 300), step = 5),
     sliderInput("scr_mos", "Margin of safety (%)", -100, 100, c(-100, 100), step = 5),
     actionButton("sector_load", "Run screen", class = "btn-primary btn-sm", icon = icon("magnifying-glass-chart")),
-    muted("Loads live quotes, statements and one-year prices for every name in the selection. The full Financials universe (~200 names) takes a few minutes — filter to an industry for a faster screen.")
+    muted("Pre-filters the universe on sector, industry and market cap (listing snapshot) first, then loads live quotes, statements and one-year prices only for those candidates. Ratio, yield, dividend and valuation filters are applied to the loaded data because they need live statements.")
   )
 )
 

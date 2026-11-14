@@ -35,9 +35,18 @@ observeEvent(input$sector_pick, {
 
 observeEvent(input$sector_load, {
   pick <- input$sector_pick
-  codes <- if (pick == "ALL") asx_universe$code else sector_codes(pick)
+  # Pre-filter to the names that can pass the static (sector / industry /
+  # market-cap) criteria before fetching anything, so we don't pull statements
+  # for the whole universe when only a handful can possibly match.
+  cand <- screen_candidates(pick, input$scr_industry, input$scr_mcap)
+  codes <- cand$code
   set_busy(TRUE); on.exit(set_busy(FALSE), add = TRUE)
-  res <- withProgress(message = paste0("Loading ", if (pick == "ALL") "whole universe" else pick, " (", length(codes), " names)"), value = 0, {
+  if (length(codes) == 0) {
+    showNotification("No companies match the sector, industry and market-cap selections.", type = "warning")
+    return()
+  }
+  lbl <- if (pick == "ALL") "All sectors" else pick
+  res <- withProgress(message = paste0("Loading ", nrow(cand), " of ", nrow(asx_universe), " names (", lbl, ")"), value = 0, {
     tryCatch(load_peer_set(codes, period = "1y", progress = function(f, m) setProgress(f, detail = m)), error = function(e) NULL)
   })
   if (is.null(res)) { showNotification("Sector data unavailable.", type = "warning"); return() }
@@ -101,15 +110,10 @@ output$screen_count <- renderUI({
     # A screen has been run: count from the loaded table with every filter applied.
     value <- paste0(nrow(screened()), " of ", nrow(s$table))
   } else {
-    # No screen yet — respond immediately to the sector + industry selections
-    # using the curated universe (metrics need live data, so only these two
-    # dimensions are known before a screen is run).
-    pick <- input$sector_pick %||% "ALL"
-    u <- asx_universe
-    if (!is.null(pick) && !identical(pick, "ALL")) u <- u[u$sector == pick, , drop = FALSE]
-    ind <- input$scr_industry
-    if (!is.null(ind) && !identical(ind, "All industries") && nzchar(ind)) u <- u[u$industry == ind, , drop = FALSE]
-    value <- as.character(nrow(u))
+    # No screen yet — respond immediately to the sector / industry / market-cap
+    # selections using the curated universe (other metrics need live data, so
+    # only these three dimensions are known before a screen is run).
+    value <- as.character(nrow(screen_candidates(input$sector_pick %||% "ALL", input$scr_industry, input$scr_mcap)))
   }
   div(class = "mbs-screen-count",
       span(class = "mbs-screen-count-label", "Number of companies meeting criteria:"),
